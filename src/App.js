@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "./components/Button/Button";
 import Time from "./components/Time/Time";
+import Container from "./components/Container/Container";
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -30,12 +31,12 @@ const App = () => {
   };
 
   return (
-    <div>
+    <Container>
       <Time>{value}</Time><br></br>
       <Button func={startTimer}>Start</Button>
       <Button func={stopTimer}>Stop</Button>
       <Button func={resetTimer}>Reset</Button>
-    </div>
+    </Container>
   );
 }
 
