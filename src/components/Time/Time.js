@@ -12,7 +12,7 @@ const Time = props => {
 
         const pad = (num) => String(num).padStart(2, '0');
     
-        return pad(hours) + ":" + pad(minutes) + ":" + pad(seconds) + ":" + pad(ms);
+        return pad(hours) + ":" + pad(minutes) + ":" + pad(seconds) + "." + ms;
     };
 
     return (<label className={styles.label}>{formatTime(props.children)}</label>);
